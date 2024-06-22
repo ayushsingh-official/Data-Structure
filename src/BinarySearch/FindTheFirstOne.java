@@ -1,4 +1,4 @@
-package Crio_DSA1;
+package BinarySearch;
 
 public class FindTheFirstOne {
 
