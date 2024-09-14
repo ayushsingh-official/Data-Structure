@@ -28,7 +28,7 @@ public class PreOrderTraversalIterative {
 
 	}
 
-	private static ArrayList<Integer> PreOrderTraversal(TreeNode node) {
+	private static ArrayList<Integer> PreOrderTraversal(TreeNode node) { 
 
 		Stack<TreeNode> stack = new Stack<>();
 

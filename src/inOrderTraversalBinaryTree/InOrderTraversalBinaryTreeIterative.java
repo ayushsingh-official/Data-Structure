@@ -28,7 +28,7 @@ public class InOrderTraversalBinaryTreeIterative {
 
 	}
 
-	// Left - Root - Right
+	// Left -> Root -> Right
 	public static ArrayList<Integer> printInOderTraversal(TreeNode node) {
 
 		Stack<TreeNode> stack = new Stack<>();
@@ -37,6 +37,7 @@ public class InOrderTraversalBinaryTreeIterative {
 
 		while (true) {
 
+			// for every iteration - this is working
 			if (node != null) {
 				stack.push(node);
 				node = node.left;
@@ -47,8 +48,9 @@ public class InOrderTraversalBinaryTreeIterative {
 				// i.e right most node.
 				if (stack.isEmpty()) {
 					break;
-				} else {
-					node = stack.pop(); // root Node of subtree present in stack
+				} else // if null closest parent got popped.
+				{
+					node = stack.pop(); // Parent node SubNode present in stack
 					list.add(node.val);
 					node = node.right;
 				}
