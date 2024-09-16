@@ -1,8 +1,7 @@
 package sortArrayAbsolute;
 
+import java.util.Arrays;
 import java.util.Scanner;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
 class SortArrayAbsolute {
 
@@ -23,25 +22,27 @@ class SortArrayAbsolute {
 
 	static int[] sortArrayAbsolute(int n, int arr[]) {
 
-		SortedSet<Integer> set = new TreeSet<>();
-
-		for (int value : arr) {
-			System.out.println("value : " + Math.abs(value));
-			set.add(Math.abs(value));
+		Integer[] array = new Integer[n];
+		for (int i = 0; i < arr.length; i++) {
+			array[i] = arr[i];
 		}
 
-		int[] array = new int[set.size()];
+		Arrays.sort(array, (a, b) -> {
 
-		for (int value : set) {
-			int i = 0;
-			System.out.println("value in set: " + value);
+			if (Math.abs(a) < Math.abs(b)) {
+				return -1;
+			} else if (Math.abs(a) > Math.abs(b)) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
 
-			array[i] = value;
-			System.out.println("array value : " + array[i]);
-			i++;
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = array[i];
 		}
-		
-		return array;
+
+		return arr;
 
 	}
 }
