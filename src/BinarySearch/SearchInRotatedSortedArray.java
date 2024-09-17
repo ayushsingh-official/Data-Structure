@@ -2,6 +2,8 @@ package BinarySearch;
 
 import java.util.Scanner;
 
+// Bitonic Array  
+
 class SearchInRotatedSortedArray {
 
 	// Complete the function implementation below
