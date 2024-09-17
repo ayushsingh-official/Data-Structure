@@ -45,7 +45,7 @@ class SearchInRotatedSortedArray {
 
 	}
 
-//	Binary search
+//	Binary search of Target value
 	private int searchTargetIndex(int left, int right, int[] nums, int target) {
 
 		while (left <= right) {
