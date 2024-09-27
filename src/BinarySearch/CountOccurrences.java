@@ -69,7 +69,7 @@ class CountOccurrences {
 			if (a[mid] == k) {
 				right = mid - 1;
 			} else if (a[mid] < k) {
-				left = mid + 1;
+				left = mid + 1;  // mid +1 could be the first occurance of k, thats why we are returning left
 			} else {
 				right = mid - 1;
 			}
