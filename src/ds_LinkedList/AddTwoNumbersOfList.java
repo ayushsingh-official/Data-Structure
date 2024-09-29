@@ -1,6 +1,4 @@
-package ds_tree;
-
-import ds_LinkedList.ListNode;
+package ds_LinkedList;
 
 public class AddTwoNumbersOfList {
 

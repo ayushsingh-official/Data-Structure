@@ -1,4 +1,4 @@
-package ds_tree;
+package ds_LinkedList;
 
 public class ReverseLinkedList {
 
