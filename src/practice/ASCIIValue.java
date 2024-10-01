@@ -8,11 +8,15 @@ public class ASCIIValue {
 
 		int ascii = 'h' - 'a';
 
-		System.out.println(ascii);
+//		System.out.println(ascii);
 
 		char newChar = (char) ascii;
 
-		System.out.println(newChar);
+//		System.out.println(newChar);
+
+		String s = "xyzzzbbbbbxxewsdxfcghvbj";
+
+		System.out.println(s.length());
 
 	}
 

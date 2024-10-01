@@ -2,8 +2,6 @@ package ds_tree;
 
 public class KSmallestElement {
 
-	int pos = 0;
-
 	public static void main(String[] args) {
 
 		TreeNode node = new TreeNode(1);
@@ -17,39 +15,41 @@ public class KSmallestElement {
 		node.right.right = new TreeNode(7);
 		node.right.left = new TreeNode(6);
 
-		int val =  kthSmallestElementInABst(node, 4);
+		int pos = 0;
+
+		int val = kthSmallestElementInABst(node, 4, pos);
 
 		System.out.println(val);
 
 	}
 
-	public static int kthSmallestElementInABst(TreeNode root, int k) {
-        
-        TreeNode node =  inOrderTraversal(k,root);
+	public static int kthSmallestElementInABst(TreeNode root, int k, int pos) {
 
-        return node.val;
+		TreeNode node = inOrderTraversal(k, root, pos);
 
-    }
+		return node.val;
 
-	public static TreeNode inOrderTraversal(int k,TreeNode root)){
+	}
 
-        if(root == null){
-            return root;
-        }
+	public static TreeNode inOrderTraversal(int k, TreeNode root, int pos) {
 
-        TreeNode left = inOrderTraversal(k,root.left);
-        if(left != null){
-            return left;
-        }
+		if (root == null) {
+			return root;
+		}
 
-        pos++;
+		TreeNode left = inOrderTraversal(k, root.left, pos);
+		if (left != null) {
+			return left;
+		}
 
-        if(pos == k){
-            return root;
-        }
+		pos++;
 
-        TreeNode right = inOrderTraversal(k,root.right);
-        return right;
-    }
+		if (pos == k) {
+			return root;
+		}
+
+		TreeNode right = inOrderTraversal(k, root.right, pos);
+		return right;
+	}
 
 }
